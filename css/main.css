@@ -25,7 +25,8 @@ button:hover {
 
 /* Récupère la police et la taille du texte du parent (inherit) */
 input,
-button {
+button,
+textarea {
     font-family: inherit;
     font-size: inherit;
 }
@@ -44,6 +45,17 @@ form label {
     margin-bottom: .2em;
     cursor: pointer;
 }
+
+form input[type="checkbox"] {
+    cursor: pointer;
+    width: auto;
+}
+
+form input[type="checkbox"] + label {
+    background: red;
+}
+
+
 
 
 
