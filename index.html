@@ -54,9 +54,18 @@
         <li>
             <label for="destination">Sélectionnez votre destination</label>
             <select name="destination" id="destination">
-                <option value="fr">France</option>
-                <option value="it">Italie</option>
-                <option value="ch">Suisse</option>
+                <!-- Europe -->
+                <optgroup label="Europe">
+                    <option value="fr">France</option>
+                    <option value="it">Italie</option>
+                    <option value="ch">Suisse</option>
+                </optgroup>
+                <!-- Amérique -->
+                <optgroup label="Amérique">
+                    <option value="br">Brésil</option>
+                    <option value="ca">Canada</option>
+                    <option value="us">USA</option>
+                </optgroup>
             </select>
         </li>
         <li>
