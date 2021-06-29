@@ -46,13 +46,17 @@ form label {
     cursor: pointer;
 }
 
-form input[type="checkbox"] {
+form [type="checkbox"],
+form [type="radio"] {
     cursor: pointer;
     width: auto;
 }
 
-form input[type="checkbox"] + label {
-    background: red;
+form [type="checkbox"] + label,
+form [type="radio"] + label
+{
+    display: inline;
+    padding: 0.3em 0;
 }
 
 

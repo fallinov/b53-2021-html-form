@@ -7,37 +7,52 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <form action="https://kode.ch/getpost/" method="post">
-        <h1>Formulaire d'inscription</h1>
-        <ul>
-            <li>
-                <label for="prenom">Votre prénom *</label>
-                <input type="text" name="prenom" id="prenom" required>
-            </li>
-            <li>
-                <label for="nom">Votre nom de famille *</label>
-                <input type="text" name="nom" id="nom" required>
-            </li>
-            <li>
-                <label for="email">Votre email</label>
-                <input type="email" name="email" id="email">
-            </li>
-            <li>
-                <label for="message">Votre message</label>
-                <textarea name="message"
-                          id="message"
-                          cols="50"
-                          rows="10"
-                ></textarea>
-            </li>
-            <li>
-                <input type="checkbox" name="copie" id="copie">
-                <label for="copie">Je veux une copie du message</label>
-            </li>
-            <li>
-                <button>Envoyer</button>
-            </li>
-        </ul>
-    </form>
+<form action="https://kode.ch/getpost/" method="post">
+    <h1>Formulaire d'inscription</h1>
+    <ul>
+        <li>
+            <label for="prenom">Votre prénom *</label>
+            <input type="text" name="prenom" id="prenom" required>
+        </li>
+        <li>
+            <label for="nom">Votre nom de famille *</label>
+            <input type="text" name="nom" id="nom" required>
+        </li>
+        <li>
+            <label for="email">Votre email</label>
+            <input type="email" name="email" id="email">
+        </li>
+        <li>
+            <label for="message">Votre message</label>
+            <textarea name="message"
+                      id="message"
+                      cols="50"
+                      rows="10"
+            ></textarea>
+        </li>
+        <li>
+            <input type="checkbox" name="copie" id="copie">
+            <label for="copie">Je veux une copie du message</label>
+        </li>
+        <li>
+            <fieldset>
+                <legend>Sélectionnez votre pays d'origine</legend>
+
+                <input type="radio" name="pays-origine" id="po-fr">
+                <label for="po-fr">France</label>
+
+                <input type="radio" name="pays-origine" id="po-it">
+                <label for="po-it">Italie</label>
+
+                <input type="radio" name="pays-origine" id="po-ch">
+                <label for="po-ch">Suisse</label>
+
+            </fieldset>
+        </li>
+        <li>
+            <button>Envoyer</button>
+        </li>
+    </ul>
+</form>
 </body>
 </html>
