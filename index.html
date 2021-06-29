@@ -52,8 +52,9 @@
             </fieldset>
         </li>
         <li>
-            <label for="destination">Sélectionnez votre destination</label>
-            <select name="destination" id="destination">
+            <label for="destination">Sélectionnez votre destination *</label>
+            <select name="destination" id="destination" required>
+                <option value="" selected>-- Choisir une pays --</option>
                 <!-- Europe -->
                 <optgroup label="Europe">
                     <option value="fr">France</option>
@@ -67,6 +68,23 @@
                     <option value="us">USA</option>
                 </optgroup>
             </select>
+        </li>
+        <li>
+            <fieldset>
+                <legend>Sélectionnez vos genres musicaux favoris</legend>
+                <div>
+                    <input type="checkbox" name="musique" id="mu-pop" value="pop">
+                    <label for="mu-pop">Pop</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="musique" id="mu-rock" value="rock">
+                    <label for="mu-rock">Rock</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="musique" id="mu-punk" value="punk">
+                    <label for="mu-punk">Punk</label>
+                </div>
+            </fieldset>
         </li>
         <li>
             <button>Envoyer</button>

@@ -10,6 +10,16 @@ html {
     color: #333333;
 }
 
+/* Récupère la police, la taille et couleur du texte du parent (inherit) */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
 button {
     cursor: pointer;
     color: white;
@@ -21,14 +31,6 @@ button {
 
 button:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,.3);
-}
-
-/* Récupère la police et la taille du texte du parent (inherit) */
-input,
-button,
-textarea {
-    font-family: inherit;
-    font-size: inherit;
 }
 
 form > ul {
