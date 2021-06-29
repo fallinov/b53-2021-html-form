@@ -53,10 +53,9 @@ form [type="radio"] {
 }
 
 form [type="checkbox"] + label,
-form [type="radio"] + label
-{
-    display: inline;
-    padding: 0.3em 0;
+form [type="radio"] + label {
+    display: inline-block;
+    padding: .15em 0;
 }
 
 
