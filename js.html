@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires HTML</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<form action="https://kode.ch/getpost/" method="post">
+    <ul>
+        <li>
+            <label for="tache">Nom de la tâche</label>
+            <input type="text" name="tache" id="tache">
+        </li>
+        <li>
+            <button>Ajouter</button>
+        </li>
+    </ul>
+</form>
+
+<ul class="taches">
+    <li>Acheter du pain</li>
+    <li>Vendre mon maillot de la France</li>
+    <li>Remplir le frigo de bières</li>
+</ul>
+
+<script>
+    /* Création des variables */
+    let btAjouter = document.querySelector("button")
+    let txtTache = document.querySelector("#tache")
+    let ulTaches = document.querySelector(".taches")
+
+    // btAjouter.style.backgroundColor = '#00FF00';
+    console.log(btAjouter, txtTache, ulTaches)
+
+    /* Ecoute clic sur bouton ajouter */
+    btAjouter.addEventListener("click", function (event){
+        // Annule l'envoi du formulaire
+        event.preventDefault();
+
+        // Récuper la saisie par utilisateur
+        let saisie = txtTache.value
+
+        // Si saisie est vide on arrête
+        if(saisie == "") {
+            alert("Entrez une tâche !")
+            return // Sort de la fonctions
+        }
+
+        // Ajouter le nouvel élément à la <ul>
+        ulTaches.innerHTML += "<li>" + saisie + "</li>"
+        // Vider le champs texte
+        txtTache.value = ""
+    })
+
+</script>
+</body>
+</html>
