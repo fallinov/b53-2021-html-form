@@ -14,7 +14,8 @@
             <input type="text" name="tache" id="tache">
         </li>
         <li>
-            <button>Ajouter</button>
+            <button id="ajouter">Ajouter</button>
+            <button id="reset">Reset</button>
         </li>
     </ul>
 </form>
@@ -27,12 +28,13 @@
 
 <script>
     /* Création des variables */
-    let btAjouter = document.querySelector("button")
+    let btAjouter = document.querySelector("#ajouter")
+    let btReset = document.querySelector("#reset")
     let txtTache = document.querySelector("#tache")
     let ulTaches = document.querySelector(".taches")
 
     // btAjouter.style.backgroundColor = '#00FF00';
-    console.log(btAjouter, txtTache, ulTaches)
+    console.log(btAjouter, btReset, txtTache, ulTaches)
 
     /* Ecoute clic sur bouton ajouter */
     btAjouter.addEventListener("click", function (event){
@@ -52,7 +54,21 @@
         ulTaches.innerHTML += "<li>" + saisie + "</li>"
         // Vider le champs texte
         txtTache.value = ""
+        // Redonne le focus
+        txtTache.focus()
     })
+
+    // Reset
+    btReset.addEventListener("click", function (event){
+        event.preventDefault()
+        // Vider la liste des tâches
+        ulTaches.innerHTML = ""
+        // Vider le champs texte
+        txtTache.value = ""
+        // Redonne le focus
+        txtTache.focus()
+    })
+
 
 </script>
 </body>
